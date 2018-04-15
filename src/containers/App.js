@@ -41,6 +41,7 @@ class App extends React.Component {
         return (
             <div className={style.TodoApp}>
                 <Title title="Moja aplikacja Todo" quantity={this.state.data.length} />
+                <TodoList tasks={this.state.data} remove={this.removeTodo.bind(this)} />
             </div>
         );
     }
